@@ -1,7 +1,6 @@
 import time
 import undetected_chromedriver as uc
 from selenium.webdriver.common.by import By
-from bs4 import BeautifulSoup
 
 query = ""   #輸入查詢關鍵字
 forum = ""   #輸入查詢看板
