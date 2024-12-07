@@ -21,13 +21,13 @@ posts = soup.find_all("div",'x78zum5 xdt5ytf')  #先找到存放文章的標籤
 for post in posts:
     for element in post.find_all():
         if element.name == "time":
-            element = element.get("title")+"\n"
-            write_txt(element)
+            post_time = "TIME："+element.get("title")+"\n"
+            write_txt(post_time)
         elif element.name == "div" and "x1a6qonq" in element.get("class",[]):
-            element = element.text+"\n"
-            write_txt(element)
+            text = element.text+"\n"
+            write_txt(text)
         elif element.name == "picture":
-            element = "img："+element.find("img").get("src")
-            write_txt(element)
+            img = "img："+element.find("img").get("src")
+            write_txt(img)
     write_txt("\n==================\n")
-		self.write(article)
+driver.close()
