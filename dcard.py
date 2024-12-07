@@ -8,8 +8,10 @@ def write_txt(element):
     with open(filename, "a", encoding = "utf-8") as outputfile:
         return outputfile.write(element)
 
+query = ""   #輸入查詢關鍵字
+forum = ""   #輸入查詢看板
 driver = uc.Chrome()
-driver.get("https://www.dcard.tw/search/posts?query=星座運勢&forum=horoscopes&sort=latest")
+driver.get(f"https://www.dcard.tw/search/posts?query={query}&forum={forum}&sort=latest")
 time.sleep(3)
 
 soup = BeautifulSoup(driver.page_source, "html.parser")
