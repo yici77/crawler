@@ -29,3 +29,14 @@ for post in posts:
             write_txt(element)
     write_txt("\n==================\n")
 ```
+
+#### dcard.py
+- 要爬蟲的網址
+```python
+query = ""   #輸入查詢關鍵字
+forum = ""   #輸入查詢看板
+driver = uc.Chrome()
+driver.get(f"https://www.dcard.tw/search/posts?query={query}&forum={forum}&sort=latest")
+time.sleep(3)
+```
+- 
