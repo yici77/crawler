@@ -9,10 +9,10 @@ def write_txt(element):
     with open(filename, "a", encoding = "utf-8") as outputfile:
         return outputfile.write(element)
 
+userid = ""  #放入要爬蟲的帳號
 driver = uc.Chrome()
-driver.get("https://www.threads.net/@twtd003?hl=zh-tw")
+driver.get(f"https://www.threads.net/@{userid}")
 driver.execute_script("window.scrollTo(0, 300);")
-time.sleep(3)
 
 html = driver.page_source
 soup = BeautifulSoup(html, "html.parser")
